@@ -11,7 +11,10 @@ sys.path.append(os.getcwd())
 
 from app.config import settings
 from app.database import Base
-from app.models import customer  # we'll create this next
+from app.models import customer
+from app.models import product
+from app.models import invoice
+from app.models import invoice_line_item
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
