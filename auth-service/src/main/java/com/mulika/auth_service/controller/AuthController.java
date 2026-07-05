@@ -1,5 +1,6 @@
 package com.mulika.auth_service.controller;
 
+import com.mulika.auth_service.dto.LoginRequestDto;
 import com.mulika.auth_service.dto.RegisterRequestDto;
 import com.mulika.auth_service.dto.RegisterResponseDto;
 import com.mulika.auth_service.service.AuthService;
@@ -22,5 +23,10 @@ public class AuthController {
    @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterRequestDto request){
        return ResponseEntity.status(HttpStatus.CREATED).body(authService.register(request));
+   }
+
+   @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody LoginRequestDto requestDto){
+       return ResponseEntity.ok(authService.login(requestDto));
    }
 }
