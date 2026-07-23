@@ -4,7 +4,6 @@ from typing import Optional
 from pydantic import BaseModel, EmailStr
 
 class CustomerCreate(BaseModel):
-    organization_id: uuid.UUID
     name: str
     email: Optional[EmailStr] = None
     phone: Optional[str] = None 
