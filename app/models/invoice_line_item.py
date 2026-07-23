@@ -8,7 +8,7 @@ class InvoiceLineItem(Base):
 
     id = Column(UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()"))
     invoice_id = Column(UUID(as_uuid=True), nullable=False)
-    product_id = Column(UUID(as_uuid=True), nullable=False)
+    product_id = Column(UUID(as_uuid=True), nullable=True)
 
     #copied from product table at the time of invoice creation or sale
     product_name = Column(String, nullable=False)
